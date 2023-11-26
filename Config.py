@@ -1,10 +1,10 @@
 import os
 
-ENVIRONMENT = bool(os.environ.get('ENVIRONMENT', False))
+ENVIRONMENT = bool(os.environ.get('ENVIRONMENT', True))
 
 if ENVIRONMENT:
     try:
-        API_ID = int(os.environ.get('API_ID', 0))
+        API_ID = int(os.environ.get('API_ID',25603034 ))
     except ValueError:
         raise Exception("Your API_ID is not a valid integer.")
     API_HASH = os.environ.get('API_HASH', None)
